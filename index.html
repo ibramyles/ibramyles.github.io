@@ -1,0 +1,262 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abel&family=Jost&family=Prompt&display=swap"
+      rel="stylesheet"
+    />
+    <title>Myles Portfolio</title>
+  </head>
+  <body>
+    <!-- NAV-->
+    <nav
+      class="relative flex items-center w-11/12 h-[20vh] justify-between md:w-4/5 mb-[5%] mx-auto"
+    >
+      <!-- logo -->
+      <div class="logo">
+        <img
+          src="./img/logo1.png"
+          class="w-20 h-18 cursor-pointer"
+          alt="Myles"
+        />
+      </div>
+      <!-- nav links -->
+      <div>
+        <a
+          class="connect rounded-full px-9 py-3 bg-lightBlue text-white hover:bg-lightBlueHover transition-all ease-in-out duration-500 hover:px-10"
+          >Let's connect</a
+        >
+      </div>
+    </nav>
+    <!-- hero section -->
+    <section
+      id="hero-section"
+      class="hero flex flex-col w-11/12 md:w-4/5 mx-auto mb-[8%] h-1/5 flex items-center justify-center text-center"
+    >
+      <!-- heading -->
+      <h1 class="text-5xl text-dark mb-6 font-extrabold">
+        Design solutions made easy
+      </h1>
+      <!-- paragraph one -->
+      <p class="leading-relaxed text-textBlue px-[20%] md:px-[28%] font-medium">
+        With over three years of experience in various design aspects, I'm your
+        one-stop shop for your design needs.
+      </p>
+    </section>
+
+    <!-- skills section-->
+
+    <section
+      class="flex flex-col w-11/12 md:grid md:grid-cols-3 md:w-4/5 mb-[20%] md:mb-[12%] text-xl font-semibold mx-auto md:h-[50vh] gap-6"
+    >
+      <!-- col-1 -->
+      <div
+        class="flex items-end h-[50vh] border-solid border-2 rounded-xl p-4 md:h-full"
+      >
+        Graphics Design
+      </div>
+      <!-- col 2 -->
+      <div class="flex flex-col gap-6">
+        <!-- upper row -->
+        <div class="flex w-full h-[25vh] gap-6">
+          <!-- upper row items -->
+          <div
+            class="flex items-end w-6/12 border-solid border-2 rounded-xl p-4"
+          >
+            UI/UX
+          </div>
+          <div
+            class="flex items-end w-6/12 border-solid border-2 rounded-xl p-4"
+          >
+            Apps
+          </div>
+        </div>
+        <!-- bottom div -->
+        <div
+          class="flex border-2 border-solid h-[25vh] rounded-xl items-end p-4"
+        >
+          Illustrations
+        </div>
+      </div>
+      <!-- col 3 -->
+      <div class="flex flex-col gap-6">
+        <div
+          class="flex border-2 border-solid h-[25vh] rounded-xl items-end p-4"
+        >
+          Photography
+        </div>
+        <div
+          class="flex border-2 border-solid h-[25vh] rounded-xl items-end p-4"
+        >
+          Motion Graphics
+        </div>
+      </div>
+    </section>
+
+    <!-- About me section -->
+
+    <section id="about-me" class="bg-veryLightGray">
+      <div
+        class="flex flex-col mb-[20%] md:flex-row md:h-[75vh] md:justify-between md:w-4/5 md:mx-auto md:mb-[10%] rounded-xl"
+      >
+        <!-- profile-pic -->
+        <div class="flex justify-center items-center pt-10 md:pt-0">
+          <div
+            id="profile-pic"
+            class="w-96 h-96 rounded-[50%] py-4"
+            src=""
+            alt=""
+          ></div>
+        </div>
+
+        <!-- my-info -->
+
+        <!-- right items for md:screens -->
+        <div
+          class="flex flex-col text-center w-11/12 mx-auto md:text-left md:mx-0 md:w-6/12 md:justify-evenly py-10"
+        >
+          <!-- introduction -->
+          <div class="introduction">
+            <h2 class="text-3xl md:text-4xl font-bold mb-[8%] md:mb-[0]">
+              I'm Myles, and I would love to <br />
+              work on your next project
+            </h2>
+          </div>
+          <!-- paragraph -->
+          <div id="paragraph">
+            <!-- mobile version -->
+            <p
+              class="font-medium md:hidden px-4 leading-relaxed mb-[10%] md:mb-[0]"
+            >
+              I love working with others to create beautiful design solutions.
+              I've designed everything from brand Illustrations to complete
+              mobile apps. I'm also handy with a camera!
+            </p>
+            <!-- desktop version -->
+            <p
+              class="font-medium hidden md:block leading-relaxed mb-[10%] md:mb-[0]"
+            >
+              I love working with others to create beautiful design solutions.
+              <br />
+              I've designed everything from brand Illustrations to complete
+              mobile apps. I'm also handy with a camera!
+            </p>
+          </div>
+          <!-- connect btn -->
+          <div id="connect-btn">
+            <a
+              class="connect rounded-full px-9 py-3 bg-lightBlue text-white hover:bg-lightBlueHover transition-all ease-in-out duration-500 hover:px-10"
+              >Let's connect</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- my work #project samples -->
+
+    <section id="my-projects">
+      <div
+        class="flex flex-col h-[60vh] mb-20 w-full md:w-full items-center md:h-[75vh] md:mb-[8%] justify-between"
+      >
+        <!-- heading -->
+        <div>
+          <h1 class="text-4xl font-bold">My Work</h1>
+        </div>
+
+        <!-- carousel -->
+        <div class="h-[35vh] md:h-[50vh] w-full border-2 border-solid">
+          <!-- Completed projects -->
+        </div>
+        <!-- btns -->
+        <div id="slide-btns" class="flex gap-3">
+          <img
+            src="./img/left-arrow.png"
+            id="left-slide"
+            class="object-contain cursor-pointer h-11 w-11 transition-all duration-500 hover:scale-125"
+            alt=""
+          />
+          <img
+            src="./img/right.png"
+            id="right-slide"
+            class="object-contain cursor-pointer h-11 w-11 hover:scale-125 transition-all duration-500"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+
+    <!-- book a call with -->
+    <section id="CTA">
+      <div
+        class="flex flex-col justify-evenly h-[60vh] text-center md:text-left md:flex-row w-11/12 md:h-[45vh] md:justify-between md:w-4/5 mx-auto rounded-xl bg-lightDarkBlue"
+      >
+        <!-- left div -->
+        <div
+          class="flex flex-col mt-[8%] md:mt-0 md:justify-center md:w-8/12 md:h-full text-white px-7 md:px-16"
+        >
+          <h1 class="text-3xl md:text-4xl font-bold mb-[10%] md:mb-[5%]">
+            Book a call with me
+          </h1>
+          <!-- desktop paragraph -->
+          <p class="hidden md:block leading-relaxed text-textBlue2">
+            I'd love to have a chat to see how I can help you.The best first
+            step is for us to discuss your project during a free consultation.
+            <br />Then we can move forward from there.
+          </p>
+          <!-- mobile paragraph -->
+          <p class="md:hidden leading-relaxed text-textBlue2">
+            I'd love to have a chat to see how I can help you.The best first
+            step is for us to discuss your project during a free consultation.
+            Then we can move forward from there.
+          </p>
+        </div>
+
+        <!-- right div -->
+        <div class="flex items-center justify-center md:w-4/12">
+          <a
+            class="connect rounded-full px-9 py-3 bg-white text-dark font-bold hover:bg-lightRed hover:text-white hover:px-10 transition-all ease-in-out duration-500 hover:font-medium"
+            >Let's connect</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer id="footer">
+      <div
+        class="flex justify-between h-[25vh] w-11/12 md:w-4/5 md:h-[30vh] mx-auto items-center"
+      >
+        <!-- left footer -->
+        <div class="logo">
+          <img
+            src="./img/logo1.png"
+            class="w-20 h-18 cursor-pointer"
+            alt="Myles"
+          />
+        </div>
+
+        <!-- right footer -->
+        <div>
+          <a
+            class="connect rounded-full px-9 py-3 bg-lightBlue text-white hover:bg-lightBlueHover transition-all ease-in-out duration-500 hover:px-10"
+            >Let's connect</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
