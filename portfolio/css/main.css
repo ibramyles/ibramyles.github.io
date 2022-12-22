@@ -827,8 +827,8 @@ html {
 }
 
 #profile-pic {
-  background-image: url(../img/20221106_141426.jpg);
-  background-position: center;
+  background-image: url(../img/20221106_141426.png);
+  background-position: top;
   background-repeat: no-repeat;
   background-size: contain;
   background-color: lightBlue;
