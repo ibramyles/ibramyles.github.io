@@ -825,6 +825,33 @@ html {
 .ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+.skills {
+  color: #fff;
+}
+.graphics-design {
+  background-image: url(../img/andrew-ridley-jR4Zf-riEjI-unsplash.jpg);
+}
+
+.ui-ux {
+  background-image: url(../img/jean-beller-6cLBliGpaoM-unsplash.jpg);
+}
+
+.apps {
+  background-image: url(../img/jason-leung-UMncYEfO9-U-unsplash.jpg);
+}
+
+.illustrations {
+  background-image: url(../img/irina-ermakova-XWc8sfnufRI-unsplash.jpg);
+  background-position: top;
+}
+
+.photography {
+  background-image: url(../img/katharina-maria-1A9mkfjtZyg-unsplash.jpg);
+}
+
+.motion-graphics {
+  background-image: url(../img/robert-horvick-1R4uPYipCFM-unsplash.jpg);
+}
 
 #profile-pic {
   background-image: url(../img/20221106_141426.png);
