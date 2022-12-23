@@ -825,34 +825,56 @@ html {
 .ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.skills {
+.skills{
   color: #fff;
 }
-.graphics-design {
-  background-image: url(../img/andrew-ridley-jR4Zf-riEjI-unsplash.jpg);
-}
 
+
+.graphics-design {
+  
+  background-image: url(../img/andrew-ridley-jR4Zf-riEjI-unsplash.jpg);
+  background-repeat: no-repeat;
+}
+.graphics-design:hover {
+  transition: all 1s ease-in-out;
+  scale: 1.03;
+}
 .ui-ux {
   background-image: url(../img/jean-beller-6cLBliGpaoM-unsplash.jpg);
 }
-
+.ui-ux:hover{
+  transition: all 1s ease-in-out;
+    scale: 1.03;
+}
 .apps {
   background-image: url(../img/jason-leung-UMncYEfO9-U-unsplash.jpg);
 }
-
+.apps:hover {
+  transition: all 1s ease-in-out;
+    scale: 1.03;
+}
 .illustrations {
   background-image: url(../img/irina-ermakova-XWc8sfnufRI-unsplash.jpg);
   background-position: top;
 }
-
+.illustrations:hover {
+  transition: all 1s ease-in-out;
+    scale: 1.03;
+}
 .photography {
   background-image: url(../img/katharina-maria-1A9mkfjtZyg-unsplash.jpg);
 }
-
+.photography:hover {
+  transition: all 1s ease-in-out;
+    scale: 1.03;
+}
 .motion-graphics {
   background-image: url(../img/robert-horvick-1R4uPYipCFM-unsplash.jpg);
 }
-
+.motion-graphics:hover {
+  transition: all 1s ease-in-out;
+    scale: 1.03;
+}
 #profile-pic {
   background-image: url(../img/20221106_141426.png);
   background-position: top;
