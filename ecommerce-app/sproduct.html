@@ -1,0 +1,253 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-commerce-app</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Freehand&family=Jost&family=Nunito&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="site-container">
+      <!-- Site top nav -->
+      <nav id="nav" class="border-b-2">
+        <div
+          class="nav-content relative h-[20vh] justify-between w-[85vw] mx-auto flex flex-col text-gray-600"
+        >
+          <!-- Logo -->
+          <div class="flex items-center justify-between pt-8">
+            <div class="logo font-bold">
+              <a href="index.html">
+                <h2 class="text-4xl">Fashion Store</h2>
+              </a>
+            </div>
+
+            <div class="flex text-sm gap-5 items-center">
+              <!-- 
+                log in 
+              -->
+              <div class="cursor-pointer">Login</div>
+              <!-- signup -->
+              <div
+                class="bg-brightRed text-white cursor-pointer px-2 py-0.5 rounded-md text-sm hover:border-[1px] hover:border-brightRed hover:bg-white hover:text-gray-900 transition-all duration-300 ease-in-out"
+              >
+                Sign up
+              </div>
+              <!--
+                
+                cart
+              
+              -->
+              <a href="cart.html"
+                ><div class="relative text-3xl">
+                  <!-- <i class="bi bi-bag cursor-pointer"></i> -->
+                  <img
+                    class="cart-icon pointer"
+                    src="./Assets/icon-cart.svg"
+                    alt=""
+                  />
+                  <!-- cart amount -->
+                  <div
+                    id="cartAmount"
+                    class="flex justify-center text-white text-xs px-1 bg-brightRed rounded-full absolute -top-2 -right-2"
+                  >
+                    0
+                  </div>
+                </div></a
+              >
+            </div>
+          </div>
+
+          <!-- nav links -->
+          <div id="search-bar" class="flex justify-between mb-2 items-center">
+            <!-- left nav -->
+            <div>
+              <ul
+                class="nav-links flex gap-12 text-sm text-gray-900 font-medium"
+              >
+                <li><a href="">Trends</a></li>
+                <li><a href="">Sell</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="">Discover</a></li>
+                <li><a href="">Support</a></li>
+              </ul>
+            </div>
+
+            <!--
+              
+              right nav
+            
+             
+            -->
+            <div class="search-bar">
+              <form class="flex gap-2">
+                <input
+                  class="search-input w-[30vw] rounded-md px-3 outline-none"
+                  placeholder="search.."
+                  type="text"
+                />
+                <button type="submit">
+                  <img src="./Assets/search-regular-24.png" alt="search" />
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- 
+      product page
+     -->
+      <section id="productDetails" class="product-details w-screen mt-[25vh]">
+        <!-- selected product here -->
+      </section>
+      <!-- 
+    *
+    *
+    Related products
+    *
+    * 
+  -->
+      <section class="related-products-section min-h-auto w-screen mt-12 mb-12">
+        <section class="mx-auto w-[85vw] min-h-auto">
+          <div class="grid grid-cols-3 items-center text-3xl font-bold">
+            <div class="side-line border-b-2"></div>
+            <div class="">
+              <h2 class="text-center">Related Products</h2>
+            </div>
+            <div class="side-line border-b-2"></div>
+          </div>
+          <div class="flex justify-center mt-3">
+            <h5 class="no-related-product text-sm">You might also like</h5>
+          </div>
+          <section
+            class="related-products grid grid-cols-5 w-[85vw] gap-8 gap-y-8 min-h-auto mx-auto mb-14 mt-14"
+          ></section>
+        </section>
+      </section>
+      <!-- * * NewsLetter section * * -->
+
+      <section class="newsletter flex items-center w-[100vw] h-[25vh]">
+        <section class="flex justify-between items-center w-[85vw] mx-auto">
+          <div>
+            <h2 class="text-3xl mb-2 text-white">Subscribe to Newsletters</h2>
+            <h5 class="text-gray-600">
+              Get E-mail updates on new products and special offers.
+            </h5>
+          </div>
+          <!-- signup form -->
+          <div class="text-sm">
+            <form action="" class="flex gap-0">
+              <input
+                type="text"
+                class="rounded-l-md focus:outline-0 px-3 py-3"
+                placeholder="Your email address"
+              />
+              <button
+                type="submit"
+                class="bg-green-400 text-white rounded-r-md px-4 py-3"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </section>
+      </section>
+      <!-- 
+    *
+    *
+    footer 
+    *
+    *
+     -->
+      <footer>
+        <section
+          class="footer grid items-center justify-center w-[100vw] h-[60vh]"
+        >
+          <!-- main footer section -->
+          <section class="grid grid-cols-4 w-[85vw] mt-16 mx-auto">
+            <section class="">
+              <!-- logo -->
+              <div class="logo font-bold">
+                <a href="index.html">
+                  <h2 class="text-4xl">Fashion Store</h2>
+                </a>
+              </div>
+              <!-- contact -->
+              <div class="contact">
+                <h4 class="mb-4 mt-4">Contact</h4>
+                <div class="flex flex-col gap-2">
+                  <h5>Adrress: Iganga Municipality Main Rd</h5>
+                  <h5>Phone: +256-753-602-473</h5>
+                </div>
+              </div>
+              <!-- follow us -->
+              <div class="flex flex-col mt-4">
+                <h4 class="mb-4">Follow Us</h4>
+                <div class="flex gap-2">
+                  <a href=""><i class="fa-brands fa-twitter"></i></a>
+                  <a href=""><i class="fa-brands fa-facebook"></i></a>
+                  <a href=""><i class="fa-brands fa-instagram"></i></a>
+                  <a href=""><i class="fa-brands fa-pinterest"></i></a>
+                </div>
+              </div>
+            </section>
+            <!-- about -->
+            <section>
+              <h4 class="mb-4">About</h4>
+
+              <ul class="flex flex-col gap-2">
+                <li><a href="">About Us</a></li>
+                <li><a href="">Privacy Policy</a></li>
+                <li><a href="">Terms and Conditions</a></li>
+                <li><a href="">Contact</a></li>
+              </ul>
+            </section>
+            <!-- account -->
+            <section>
+              <h4 class="mb-4">My Account</h4>
+
+              <ul class="flex flex-col gap-2">
+                <li><a href="">Sign in</a></li>
+                <li><a href="">View Cart</a></li>
+                <li><a href="">My Wishlist</a></li>
+                <li><a href="">Track My Order</a></li>
+                <li><a href="">Help</a></li>
+              </ul>
+            </section>
+            <!-- install app -->
+            <section>
+              <h4 class="mb-4">Install App</h4>
+              <h5>From Apple Store or Google Play</h5>
+              <div>
+                <!-- apple -->
+                <!-- google -->
+              </div>
+              <div>
+                <!-- payment gateways -->
+              </div>
+            </section>
+          </section>
+          <!-- copyright and developer -->
+          <section class="flex justify-center">
+            <h5>Copyright &#169; 2023 All Rights Reserved</h5>
+          </section>
+        </section>
+      </footer>
+    </div>
+    <script src="./data.js"></script>
+    <script src="./productpage.js"></script>
+    <script src="./navbar.js"></script>
+  </body>
+</html>
