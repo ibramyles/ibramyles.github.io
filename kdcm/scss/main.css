@@ -42,7 +42,7 @@ nav section .logo-mobile {
   nav section .logo-mobile {
     display: block;
     position: relative;
-    left: -35vw;
+    left: -30vw;
   }
 }
 nav section .logo-mobile img {
@@ -1357,6 +1357,11 @@ nav section .nav-links ul .donate:hover {
   background: #6d767e;
   border-radius: 10px;
   overflow: hidden;
+}
+@media (max-width: 576px) {
+  .recent-stories .recent-stories-inner .stories-cards-section .story-card .story-img {
+    height: 40vh;
+  }
 }
 .recent-stories .recent-stories-inner .stories-cards-section .story-card .story-img #video {
   position: relative;

@@ -7,7 +7,6 @@ nav {
     z-index: 50;
 
     @include mobile {
-        // background-color: rgba(0, 0, 0, 0.5);
         background: $white;
     }
 
@@ -36,7 +35,7 @@ nav {
             @include mobile {
                 display: block;
                 position: relative;
-                left: -35vw;
+                left: -30vw;
             }
 
             img {
