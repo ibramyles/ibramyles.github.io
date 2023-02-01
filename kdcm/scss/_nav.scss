@@ -19,59 +19,143 @@ nav {
         margin-inline: auto;
         justify-content: space-between;
 
-        @include mobile {
-            width: 90vw;
-        }
-
         .logo img {
             height: 120px;
             width: 120px;
             cursor: pointer;
         }
 
-        .nav-links ul {
-            display: flex;
-            gap: 25px;
-
-            a {
-                color: $white;
+        .nav-links {
+            @include mobile {
+                display: none;
             }
 
-            a:hover {
-                color: $orange;
-            }
+            ul {
+                display: flex;
+                gap: 25px;
 
-            .donate {
-                padding: 10px 20px;
-                background: $orange;
-                color: $white;
-            }
+                a {
+                    color: $white;
+                }
 
-            .donate:hover {
-                padding: 10px 20px;
-                background: none;
-                border: 1px solid $orange;
-                color: $white;
-                transition: all 0.2s ease-in;
+                a:hover {
+                    color: $orange;
+                }
+
+                .donate {
+                    padding: 10px 20px;
+                    background: $orange;
+                    color: $white;
+                }
+
+                .donate:hover {
+                    padding: 10px 20px;
+                    background: none;
+                    border: 1px solid $orange;
+                    color: $white;
+                    transition: all 0.2s ease-in;
+                }
             }
         }
+
     }
 }
 
-.nav-scrolled {
-    background-color: rgba(0, 0, 0, 0.5);
-    border: 0;
 
+.burger {
+    outline: none;
+    display: none;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    transition: all 0.25s;
+    position: relative;
+    background: $white;
 
+    @include mobile {
+        display: block;
+    }
 
-    .nav-links ul {
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background: #000;
+    transform: rotate(0);
+    transition: all 0.5s;
+}
+
+.hamburger-middle {
+    transform: translateY(7px);
+}
+
+.hamburger-bottom {
+    transform: translateY(14px);
+}
+
+.open {
+    transform: rotate(90deg);
+    transform: translateY(0px);
+
+}
+
+.open .hamburger-top {
+    transform: rotate(45deg) translateY(6px) translate(6px);
+
+}
+
+.open .hamburger-middle {
+    display: none;
+
+}
+
+.open .hamburger-bottom {
+    transform: rotate(-45deg) translateY(6px) translate(-6px);
+
+}
+
+.mobile-nav-links {
+    display: none;
+    background: $white;
+    position: absolute;
+    top: 12vh;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 40vw;
+    height: 80vh;
+
+    ul {
+        width: 40vw;
+        height: 80vh;
         display: flex;
-        gap: 25px;
+        justify-content: space-around;
+        flex-direction: column;
+        place-items: center;
 
-        .donate {
-            padding: 6px 16px;
+        a {
+            color: $orange;
+        }
+
+        .donate-btn {
+            width: 120px;
             background: $orange;
             color: $white;
+            padding: 10px 20px;
+        }
+
+        .donate-btn:hover {
+            background: none;
+            border: 1px solid $orange;
+            color: $orange;
         }
     }
+
+
 }

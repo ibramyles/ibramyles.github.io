@@ -25,15 +25,15 @@ nav section {
   margin-inline: auto;
   justify-content: space-between;
 }
-@media (max-width: 576px) {
-  nav section {
-    width: 90vw;
-  }
-}
 nav section .logo img {
   height: 120px;
   width: 120px;
   cursor: pointer;
+}
+@media (max-width: 576px) {
+  nav section .nav-links {
+    display: none;
+  }
 }
 nav section .nav-links ul {
   display: flex;
@@ -58,18 +58,92 @@ nav section .nav-links ul .donate:hover {
   transition: all 0.2s ease-in;
 }
 
-.nav-scrolled {
-  background-color: rgba(0, 0, 0, 0.5);
-  border: 0;
+.burger {
+  outline: none;
+  display: none;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+  position: relative;
+  background: hsl(0deg, 0%, 100%);
 }
-.nav-scrolled .nav-links ul {
+@media (max-width: 576px) {
+  .burger {
+    display: block;
+  }
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: #000;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.hamburger-middle {
+  transform: translateY(7px);
+}
+
+.hamburger-bottom {
+  transform: translateY(14px);
+}
+
+.open {
+  transform: rotate(90deg);
+  transform: translateY(0px);
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translate(6px);
+}
+
+.open .hamburger-middle {
+  display: none;
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translate(-6px);
+}
+
+.mobile-nav-links {
+  display: none;
+  background: hsl(0deg, 0%, 100%);
+  position: absolute;
+  top: 12vh;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 40vw;
+  height: 80vh;
+}
+.mobile-nav-links ul {
+  width: 40vw;
+  height: 80vh;
   display: flex;
-  gap: 25px;
+  justify-content: space-around;
+  flex-direction: column;
+  place-items: center;
 }
-.nav-scrolled .nav-links ul .donate {
-  padding: 6px 16px;
+.mobile-nav-links ul a {
+  color: hsl(27deg, 98%, 54%);
+}
+.mobile-nav-links ul .donate-btn {
+  width: 120px;
   background: hsl(27deg, 98%, 54%);
   color: hsl(0deg, 0%, 100%);
+  padding: 10px 20px;
+}
+.mobile-nav-links ul .donate-btn:hover {
+  background: none;
+  border: 1px solid hsl(27deg, 98%, 54%);
+  color: hsl(27deg, 98%, 54%);
 }
 
 .hero {
@@ -292,7 +366,7 @@ nav section .nav-links ul .donate:hover {
 }
 @media (max-width: 576px) {
   .team .team-inner {
-    width: 90vw;
+    width: 80vw;
   }
 }
 .team .team-inner h2 {
@@ -497,6 +571,12 @@ nav section .nav-links ul .donate:hover {
   gap: 100px;
   align-items: center;
 }
+@media (max-width: 576px) {
+  .donate-section .donate-inner2 {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 50px;
+  }
+}
 .donate-section .donate-inner2 h4 {
   color: hsl(27deg, 98%, 54%);
   margin-bottom: 10px;
@@ -505,6 +585,11 @@ nav section .nav-links ul .donate:hover {
 }
 .donate-section .donate-inner2 .donate-left p {
   padding: 20px 60px 20px 0px;
+}
+@media (max-width: 576px) {
+  .donate-section .donate-inner2 .donate-left p {
+    padding: 20px 20px 20px 0px;
+  }
 }
 .donate-section .donate-inner2 .donate-right {
   visibility: visible;
@@ -588,16 +673,27 @@ nav section .nav-links ul .donate:hover {
   font-weight: 600;
 }
 .donate-section .donate-inner3 .bank {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
   width: 80vw;
   margin-inline: auto;
+}
+@media (max-width: 576px) {
+  .donate-section .donate-inner3 .bank {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+  }
 }
 .donate-section .donate-inner3 .bank .bank-details {
   background: hsl(0deg, 0%, 100%);
   margin-top: 8vh;
   margin-bottom: 15vh;
-  width: 300px;
+}
+@media (max-width: 576px) {
+  .donate-section .donate-inner3 .bank .bank-details {
+    margin-bottom: 0;
+  }
 }
 .donate-section .donate-inner3 .bank .bank-details .bank-heading {
   margin-top: 15px;
@@ -623,6 +719,11 @@ nav section .nav-links ul .donate:hover {
   padding: 15px 30px;
   color: #6d767e;
 }
+@media (max-width: 576px) {
+  .donate-section .donate-inner3 .bank .bank-details .details {
+    place-items: center;
+  }
+}
 .donate-section .donate-inner3 .bank .bank-details .details span {
   font-weight: normal;
 }
@@ -631,6 +732,11 @@ nav section .nav-links ul .donate:hover {
   font-size: 0.8rem;
   letter-spacing: 0.8px;
   line-height: 2.5rem;
+}
+@media (max-width: 576px) {
+  .donate-section .donate-inner3 .bank .bank-details:nth-child(3) {
+    margin-bottom: 10vh;
+  }
 }
 
 * {
@@ -1074,7 +1180,7 @@ nav section .nav-links ul .donate:hover {
 @media (max-width: 768px) {
   .events .events-inner .events-cards-section {
     grid-template-columns: repeat(2, 1fr);
-    width: 90vw;
+    width: 80vw;
     min-height: 100vh;
   }
 }
@@ -1770,7 +1876,7 @@ input:focus {
   padding-top: 10px;
   text-align: center;
   padding-inline: 450px;
-  color: hsl(0deg, 0%, 16%);
+  color: hsl(0deg, 0%, 100%);
 }
 @media (max-width: 576px) {
   .how-you-help p {
