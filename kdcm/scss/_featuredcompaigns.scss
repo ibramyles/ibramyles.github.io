@@ -1,0 +1,251 @@
+@import './config';
+
+/**
+
+
+*! on going campaigns
+
+
+
+**/
+.campaigns-section {
+    width: 100vw;
+    min-height: 105vh;
+    background: $bgLightGray;
+    border: 1px solid $bgLightGray;
+
+    @include mobile {
+        min-height: 60vh;
+    }
+
+    .campaigns-inner {
+        position: relative;
+        margin: 8vh 0vh;
+        width: 100vw;
+        margin-inline: auto;
+
+        @include mobile {
+            margin: 4vh 0vh;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: $orange;
+            text-align: center;
+
+            // @include mobile {
+            //     // font-size: 1.5rem;
+            // }
+        }
+
+        h4 {
+            margin-top: 10px;
+            text-align: center;
+            color: $darkFont;
+
+            // @include mobile {
+            //     font-size: 0.8rem;
+            // }
+        }
+
+        .campaigns-slide-container {
+            width: 100vw;
+            height: 60vh;
+            position: absolute;
+            top: 52vh;
+            left: 50vw;
+            transform: translate(-50%, -50%);
+            overflow: hidden;
+
+            @include mobile {
+                height: 30vh;
+                margin-top: -20vh;
+            }
+
+            .inner-slider {
+                width: 205.5vw;
+                display: flex;
+                gap: 20px;
+                pointer-events: none;
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                @include mobile {
+                    width: 300vw;
+                }
+
+                .slide-card {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    height: 60vh;
+                    width: 50vw;
+                    z-index: 50;
+
+                    @include mobile {
+                        width: 70vw;
+                        height: 30vh;
+                    }
+
+                    .donated-circle {
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        width: 70px;
+                        height: 70px;
+                        border-radius: 50%;
+                        background: $white;
+                        top: 20px;
+                        left: 20px;
+
+                        @include mobile {
+                            width: 45px;
+                            height: 45px;
+                            top: 0px;
+                            left: 0px;
+                        }
+
+                        h1 {
+                            color: $orange;
+                            font-size: 1.5rem;
+
+                            @include mobile {
+                                font-size: 1rem;
+                            }
+                        }
+
+                        p {
+                            font-size: 0.8rem;
+
+                            @include mobile {
+                                font-size: 0.6rem;
+                            }
+                        }
+                    }
+
+                    .campaign-info {
+                        left: 20px;
+                        width: 95%;
+                        margin-inline: auto;
+                        margin-bottom: 20px;
+
+                        .area {
+                            margin-bottom: 15px;
+
+                            h6 {
+                                font-weight: 600;
+                                font-family: 'Poppins', sans-serif;
+                                font-size: 0.8rem;
+                                color: $white;
+
+                                @include mobile {
+                                    font-size: 0.5rem;
+                                }
+                            }
+                        }
+
+                        .project-name {
+                            margin-bottom: 15px;
+
+                            h1 {
+                                color: $white;
+                                font-weight: 600;
+                                // font-family: 'Poppins', sans-serif;
+                                font-size: 1.5rem;
+                                letter-spacing: 1px;
+
+                                @include mobile {
+                                    font-size: 1rem;
+                                }
+                            }
+                        }
+
+                        .donations {
+                            display: flex;
+                            justify-content: space-between;
+                            pointer-events: all;
+
+                            div {
+                                display: flex;
+                                align-items: center;
+                                width: 250px;
+                                height: 40px;
+                                background: $white;
+                                padding-inline: 10px;
+
+                                @include mobile {
+                                    width: 260px;
+                                    margin-inline: auto;
+                                    height: 30px;
+                                }
+
+                                section {
+                                    display: flex;
+                                    justify-content: space-between;
+                                    width: 250px;
+
+                                    span {
+                                        color: $orange;
+                                    }
+                                }
+                            }
+
+                            button {
+                                padding: 10px 20px;
+                                background: $orange;
+                                color: $white;
+                                cursor: pointer;
+
+                                @include mobile {
+                                    position: absolute;
+                                    top: 0;
+                                    right: 0;
+                                }
+                            }
+
+                            button:hover {
+                                border: 1px solid $orange;
+                                background: rgba(0, 0, 0, .5);
+                                color: $white;
+                            }
+                        }
+                    }
+                }
+
+
+
+                .slide-card:nth-child(1) {
+                    background-image: url(../assets/hunger-outreach-program.jpg);
+                    background-size: cover;
+                    background-position: center;
+                }
+
+                .slide-card:nth-child(2) {
+                    background-image: url(../assets/eldery-support-program-3.jpg);
+                    background-size: cover;
+                    // background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(../assets/eldery-support-program-3.jpg);
+                    background-position: top;
+
+                }
+
+                .slide-card:nth-child(3) {
+                    background-image: url(../assets/farming.jpg);
+                    // background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(../assets/farming.jpg);
+                    background-size: cover;
+                }
+
+                .slide-card:nth-child(4) {
+                    background-image: url(../assets/safe-water-program-1.jpg);
+                    // background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(../assets/safe-water-program-1.jpg);
+                    background-size: cover;
+                    background-position: bottom;
+                }
+            }
+        }
+    }
+}

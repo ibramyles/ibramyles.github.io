@@ -1,0 +1,175 @@
+@import './config';
+
+
+/**
+
+
+
+*! Team
+
+
+
+**/
+.team {
+    width: 100vw;
+    min-height: 85vh;
+    border: 1px solid $white;
+
+    @include mobile {
+        min-height: 95vh;
+
+    }
+
+    .team-inner {
+        margin: 8vh 0px;
+        width: 80vw;
+        margin-inline: auto;
+        position: relative;
+
+        @include mobile {
+            width: 90vw;
+
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: $orange;
+            text-align: center;
+        }
+
+        h4 {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .team-cards {
+            margin-top: 30vh;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            position: relative;
+
+            @include mobile {
+                grid-template-columns: repeat(1, 1fr);
+                gap: 15vh;
+
+            }
+
+            .card {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                height: 150px;
+                border: 1px dotted $gray;
+                background: $bgLightGray;
+                opacity: 0;
+                transition: all 1s ease-in-out;
+                // border-radius: 10px;
+
+                div {
+                    margin-top: -75px;
+                    height: 150px;
+                    width: 150px;
+                    border-radius: 100%;
+
+                    img {
+                        height: 150px;
+                        width: 150px;
+                        border-radius: 100%;
+                    }
+                }
+            }
+
+            .card:hover {
+                height: 200px;
+                opacity: 0;
+                transition: all 1s ease-in-out;
+
+                div {
+                    margin-top: -75px;
+                    height: 150px;
+                    width: 150px;
+                    border-radius: 100%;
+                    transition: all 0.5s ease-in-out;
+
+                    img {
+                        height: 150px;
+                        width: 150px;
+                        border-radius: 100%;
+                    }
+                }
+            }
+
+            .card h4 {
+                font-family: 'Poppins', sans-serif;
+                font-size: 0.8rem;
+                font-weight: 600;
+            }
+
+            .card h5 {
+                color: $orange;
+                font-weight: 600;
+                margin-top: 10px;
+                font-size: 0.9rem;
+                text-align: center;
+                transition: all 1s ease-in-out;
+            }
+
+            .card p {
+                font-family: 'Poppins', sans-serif;
+                margin-top: 6px;
+                font-size: 0.9rem;
+                text-align: center;
+                transition: all 1s ease-in-out;
+            }
+        }
+    }
+}
+
+
+.show {
+    animation-name: floatin;
+    animation-duration: 1s;
+    transition: all 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.cards:nth-child(2) {
+    animation-delay: 200ms;
+}
+
+.cards:nth-child(3) {
+    animation-delay: 400ms;
+}
+
+@keyframes floatin {
+    from {
+        filter: blur(5px);
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+.details {
+    display: none;
+    transition: opacity 1s;
+    animation-name: fadein;
+    animation-duration: 1s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

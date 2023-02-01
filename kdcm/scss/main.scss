@@ -1,0 +1,602 @@
+@import './config';
+@import './nav';
+@import './hero';
+@import './team';
+@import './donate';
+@import './gallery';
+@import './causes';
+@import './featuredcompaigns';
+@import './upcomingevents';
+@import './recentstories';
+
+@import './footer';
+
+body {
+    font-family: 'Jost', sans-serif;
+    // font-family: 'Poppins', sans-serif;
+    // font-size: 0.8rem;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Jost', sans-serif;
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    border: none;
+    font-family: 'Jost', sans-serif;
+}
+
+input {
+    border: none;
+
+}
+
+textarea:focus,
+input:focus {
+    outline: none;
+
+}
+
+.what-we-do {
+    width: 100vw;
+    height: 100vh;
+    background: $bgLightGray;
+    border: 1px solid $white;
+    margin-top: -10vh;
+
+    @include mobile {
+        margin-top: 0vh;
+    }
+
+
+    .what-we-do-inner {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 25vh 0px;
+        width: 80vw;
+        margin-inline: auto;
+        height: 60vh;
+        // border: 2px solid green;
+        justify-content: center;
+        align-items: center;
+
+        @include mobile {
+            width: 90vw;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .what-we-do-left {
+            @include mobile {
+                display: flex;
+                flex-direction: column;
+                place-items: center;
+            }
+
+            // border: 2px solid blue;
+            h6 {
+                color: $gray;
+                margin-bottom: 10px;
+                margin-top: 15px;
+                font-family: 'Poppins', sans-serif;
+
+                @include mobile {
+                    text-align: center;
+                }
+            }
+
+            h2 {
+                font-size: 2rem;
+                font-weight: bold;
+                color: $orange;
+                text-align: left;
+
+                @include mobile {
+                    text-align: center;
+                }
+            }
+
+            p {
+                margin-top: 15px;
+                text-align: left;
+                color: $darkFont;
+                padding-right: 60px;
+                line-height: 1.8rem;
+
+                @include mobile {
+                    padding: 0px;
+                    text-align: center;
+                }
+            }
+
+            button {
+                margin-top: 5vh;
+                font-family: 'Jost',
+                    sans-serif;
+                padding: 10px 20px;
+                background: $orange;
+                color: $white;
+                cursor: pointer;
+            }
+
+            button:hover {
+                border: 1px solid $orange;
+                background: none;
+                color: $darkFont;
+            }
+        }
+
+        .what-we-do-right {
+            display: flex;
+            justify-content: flex-end;
+            height: 45vh;
+
+            // border: 1px solid red;
+
+            @include mobile {
+                // margin-right: 20px;
+                display: flex;
+                justify-content: center;
+                place-items: center;
+            }
+
+            img {
+                height: 300px;
+                width: 500px;
+                border-radius: 10px;
+
+                @include mobile {
+                    height: 30vh;
+                    width: 90vw;
+                }
+            }
+        }
+    }
+}
+
+// ! who we are
+
+.who-we-are {
+    width: 100vw;
+    min-height: 100vh;
+    background: $bgLightGray;
+    border: 1px solid $white;
+
+    @include mobile {
+        border: 1px solid $white;
+    }
+
+
+
+
+
+    .who-we-are-inner {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        width: 80vw;
+        margin-inline: auto;
+        min-height: 60vh;
+        // border: 2px solid green;
+        align-items: center;
+
+        @include mobile {
+            width: 90vw;
+            margin-top: 10vh;
+            flex-direction: column-reverse;
+        }
+
+        .who-we-are-left {
+            width: 50%;
+
+            @include mobile {
+                width: 90vw;
+            }
+
+            h6 {
+                color: $gray;
+                margin-bottom: 10px;
+                font-family: 'Poppins', sans-serif;
+                padding-left: 60px;
+
+                @include mobile {
+                    text-align: center;
+                    padding: 0;
+                }
+            }
+
+            h2 {
+                font-size: 2rem;
+                font-weight: bold;
+                color: $orange;
+                text-align: left;
+                padding-left: 60px;
+
+                @include mobile {
+                    text-align: center;
+                    padding: 0;
+                }
+            }
+
+            p {
+                margin-top: 15px;
+                text-align: left;
+                color: $darkFont;
+                padding-left: 60px;
+                line-height: 1.8rem;
+
+                @include mobile {
+                    text-align: center;
+                    padding: 0px;
+                }
+            }
+
+            button {
+                margin-top: 5vh;
+                font-family: 'Jost',
+                    sans-serif;
+                padding: 10px 20px;
+                background: $orange;
+                color: $white;
+                cursor: pointer;
+                margin-left: 60px;
+
+                @include mobile {
+                    margin-inline: auto;
+                }
+            }
+
+            button:hover {
+                border: 1px solid $orange;
+                background: none;
+                color: $darkFont;
+            }
+        }
+
+        .who-we-are-right {
+            width: 50%;
+            display: flex;
+            justify-content: flex-start;
+            height: 45vh;
+
+            @include mobile {
+                width: 90vw;
+                justify-content: center;
+
+            }
+
+            img {
+                height: 300px;
+                width: 500px;
+                border-radius: 10px;
+
+                @include mobile {
+                    height: 30vh;
+                    width: 90vw;
+                }
+
+
+            }
+        }
+    }
+}
+
+.animated {
+    animation-name: textfadein;
+    animation-duration: 1.3s;
+    transition: all 1s ease-in-out;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    transform: translateY(100%);
+}
+
+@keyframes textfadein {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.who-we-are {
+    width: 100vw;
+    height: 80vh;
+    background: $white;
+    border: 1px solid $white;
+
+    .who-we-are-inner {
+        width: 80vw;
+        height: 80vh;
+        margin-inline: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+        .who-we-are-inner1 {
+            width: 40vw;
+
+            h2 {
+                font-size: 2rem;
+                font-weight: bold;
+                color: $orange;
+                text-align: left;
+            }
+
+            h4 {
+                margin-top: 10px;
+                text-align: left;
+                color: $darkFont;
+                margin-bottom: 8px;
+            }
+        }
+
+        .who-we-are-inner2 {
+            display: flex;
+            border: 2px solid red;
+            height: 350px;
+            width: 350px;
+        }
+    }
+}
+
+
+
+
+
+.how-you-help {
+    height: 42vh;
+    width: 100vw;
+    background: $orange;
+    background-image: url(../assets/bg-simplify-section-desktop.svg);
+
+    h2 {
+        padding-top: 8vh;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
+        color: $white;
+    }
+
+    p {
+        padding-top: 10px;
+        text-align: center;
+        padding-inline: 450px;
+        color: $white;
+    }
+}
+
+.how-you-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: -15vh;
+    height: 30vh;
+    width: 60vw;
+    margin-inline: auto;
+    margin-bottom: 15vh;
+
+    h2 {
+        font-weight: 600;
+        // letter-spacing: .05rem;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: $white;
+        border-left: 1px solid $gray;
+        background: $bgLightGray;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%239C92AC' fill-opacity='0.15' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"), linear-gradient(to right bottom, hsl(210, 10%, 30%), hsl(210, 10%, 30%), hsl(210, 10%, 30%), hsl(210, 10%, 30%), hsl(210, 10%, 30%));
+
+        button {
+            margin-top: 20px;
+            padding: 8px 16px;
+            color: $white;
+            background: none;
+            border: 1px solid $orange;
+            font-family: 'Jost', sans-serif;
+            cursor: pointer;
+
+        }
+
+        button:hover {
+            cursor: pointer;
+            margin-top: 20px;
+            padding: 8px 16px;
+            color: $white;
+            background: $orange;
+            border: 1px solid $orange;
+            font-family: 'Jost', sans-serif;
+            transition: all 0.5s ease-in-out;
+
+        }
+    }
+
+    .cards {
+        opacity: 0;
+        transition: all 1s ease-in-out;
+    }
+
+    .cards:nth-child(2) {
+        animation-delay: 200ms;
+    }
+
+    .cards:nth-child(3) {
+        animation-delay: 300ms;
+    }
+
+    .cards:nth-child(4) {
+        animation-delay: 400ms;
+    }
+
+    div p {
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.7rem;
+        color: $white;
+    }
+}
+
+
+
+
+/**
+
+
+
+*! Connect with us styles
+
+
+
+**/
+.connect-with-us {
+    width: 100vw;
+    height: 50vh;
+    // background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../assets/connect.jpg);
+    background: $bgLightGray;
+    display: flex;
+    align-items: center;
+
+    .connect-inner {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        height: 50vh;
+        width: 80vw;
+        margin-inline: auto;
+        align-items: center;
+        // background: rgba(0, 0, 0, 0.4);
+
+        h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: $orange;
+        }
+
+        p {
+            margin-top: 2vh;
+            padding-inline-end: 300px;
+        }
+
+        .donate-btn {
+            color: $white;
+            margin-top: 3vh;
+            padding: 10px 20px;
+            background-color: $orange;
+            font-family: 'Jost', sans-serif;
+            cursor: pointer;
+        }
+
+        .donate-btn:hover {
+            color: $darkFont;
+            background: none;
+            border: 1px solid $orange;
+        }
+
+        .connect-form {
+            margin-top: 5vh;
+            display: flex;
+            flex-direction: column;
+            // border-radius: 4px;
+
+            input {
+                background: $white;
+                height: 30px;
+                margin-bottom: 8px;
+                width: 250px;
+                padding-left: 10px;
+                // border-radius: 4px;
+                font-size: 0.8rem;
+                font-family: 'Jost', sans-serif;
+            }
+
+            textarea {
+                resize: vertical;
+                border: none;
+                background: $white;
+                width: 250px;
+                padding: 10px;
+                font-size: 0.8rem;
+                font-family: 'Jost', sans-serif;
+            }
+
+            button {
+                margin-top: 8px;
+                width: 100px;
+                padding: 8px 16px;
+                // border-radius: 5px;
+                background: $orange;
+                color: $white;
+                font-family: 'Jost', sans-serif;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background: none;
+                border: 1px solid $orange;
+                color: $darkFont;
+                font-family: 'Jost', sans-serif;
+                cursor: pointer;
+            }
+        }
+
+        .tape1 {
+            position: absolute;
+            top: -60px;
+            left: -60px;
+            visibility: hidden;
+        }
+
+        .tape2 {
+            visibility: hidden;
+            position: absolute;
+            bottom: -70px;
+            right: -70px;
+        }
+
+        .tape img {
+            width: 200px;
+            height: 200px;
+        }
+    }
+}
+
+.animate {
+    animation-name: fader;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    transition: all 1.5s ease-in-out;
+    opacity: 0;
+}
+
+@keyframes fader {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

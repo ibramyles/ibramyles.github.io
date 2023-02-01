@@ -1,0 +1,184 @@
+.hero {
+    // margin-top: 15vh;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+
+    @include mobile {
+        height: 40vh;
+        margin-top: 12vh;
+    }
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+
+    @include mobile {
+        height: 40vh;
+    }
+}
+
+.mySlides {
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+
+    @include mobile {
+        height: 40vh;
+    }
+
+    .donate {
+        padding: 10px 20px;
+        background: $orange;
+        color: $white;
+    }
+
+    .donate:hover {
+        padding: 10px 20px;
+        background: none;
+        color: $white;
+        border: 1px solid $orange;
+    }
+}
+
+.mySlides img {
+    height: 100vh;
+    width: 100vw;
+
+    @include mobile {
+        height: 40vh;
+    }
+}
+
+/* Caption text */
+.text div {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100vw;
+    height: 20vh;
+    z-index: 10;
+    text-align: center;
+}
+
+.text div h2 {
+    font-weight: bold;
+    color: $white;
+    font-size: 4rem;
+    margin-bottom: 20px;
+    z-index: 10;
+
+    @include mobile {
+        font-size: 1.5rem;
+    }
+
+}
+
+.text div p {
+    color: $white;
+    margin-bottom: 40px;
+    text-align: center;
+
+    @include mobile {
+        font-size: 0.8rem;
+        padding-inline: 30px;
+    }
+}
+
+.dots {
+    text-align: center;
+    margin-top: -20vh;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 2px;
+    background-color: $orange;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease-in-out;
+}
+
+.active {
+    background-color: $green;
+}
+
+
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 7;
+    /* semi-transparent black */
+
+    @include mobile {
+        height: 40vh;
+    }
+}
+
+.what-you-do {
+    margin-inline: auto;
+    margin-top: -13vh;
+    width: 80vw;
+    min-height: 26vh;
+    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    @include mobile {
+        grid-template-columns: repeat(1, 1fr);
+        width: 100vw;
+        margin-top: 0;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $gray;
+        z-index: 20;
+        background: rgba(0, 0, 0, 0.05);
+        backdrop-filter: blur(5px);
+
+        @include mobile {
+            background: rgba($orange, .2);
+            flex-direction: row;
+            justify-content: space-between;
+            height: 150px;
+            padding-inline: 40px;
+        }
+
+        h3 {
+            margin-top: 10px;
+            font-weight: 600;
+            color: $orange;
+
+            @include mobile {
+                color: $darkFont;
+            }
+        }
+
+        p {
+            margin-top: 10px;
+            font-size: 0.8rem;
+            padding-inline: 20px;
+            text-align: center;
+            color: $white;
+        }
+    }
+}

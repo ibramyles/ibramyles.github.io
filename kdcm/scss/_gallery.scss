@@ -1,0 +1,29 @@
+@import './config';
+
+.gallery-section {
+    min-height: 100vh;
+    width: 100vw;
+
+    .gallery-section-1 {
+        height: 35vh;
+        width: 100vw;
+
+        h2 {
+            font-size: 5rem;
+            margin-top: 20vh;
+            color: $orange;
+            text-align: center;
+        }
+
+        h4 {
+            text-align: center;
+        }
+    }
+
+    .gallery {
+        border-top: 2px groove;
+        margin-inline: auto;
+        width: 80vw;
+        min-height: 100vh;
+    }
+}

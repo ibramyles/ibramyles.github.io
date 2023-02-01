@@ -1,0 +1,124 @@
+@import './config';
+
+/**
+
+
+
+*! Upcoming events
+
+
+
+**/
+
+.events {
+    width: 100vw;
+    height: 105vh;
+    border: 1px solid $white;
+
+    .events-inner {
+        margin: 8vh 0px;
+        width: 80vw;
+        margin-inline: auto;
+
+        @include tablet {
+            width: 90vw;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: $orange;
+            text-align: center;
+        }
+
+        h4 {
+            margin-top: 10px;
+            text-align: center;
+            color: $darkFont;
+        }
+
+        .events-cards-section {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-top: 10vh;
+            width: 80vw;
+            min-height: 60vh;
+            margin-inline: auto;
+
+            @include tablet {
+                grid-template-columns: repeat(2, 1fr);
+                width: 90vw;
+                min-height: 100vh;
+            }
+
+            @include mobile {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .event-card {
+                border-radius: 10px;
+                opacity: 0;
+                position: relative;
+                height: 60vh;
+                border: 1px dotted $gray;
+
+                .binding {
+                    width: 100%;
+                    z-index: 50;
+                    position: absolute;
+                    top: -15px;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                }
+
+                .event-img {
+                    width: 100%;
+                    height: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                    visibility: visible;
+
+                    img {
+                        width: 90%;
+                        height: 75%;
+                        border-radius: 5px;
+                    }
+
+                    h5 {
+                        font-size: 1.1rem;
+                        color: $orange;
+                        font-family: 'Poppins', sans-serif;
+                        width: 100%;
+                        text-align: center;
+                        position: absolute;
+                        top: 10px;
+                    }
+
+                }
+
+                .event-desc {
+                    padding: 0px 20px;
+                    border-bottom-left-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                    margin-inline: auto;
+                    width: 100%;
+                    height: 50&;
+
+                    h5 {
+                        font-weight: 600;
+                        color: $gray;
+                        font-family: 'Poppins', sans-serif;
+                        margin: 20px 0px 10px 0px;
+                    }
+                }
+            }
+
+            .event-card:hover {
+                background: $bgLightGray;
+            }
+        }
+    }
+}

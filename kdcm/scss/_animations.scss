@@ -1,0 +1,19 @@
+.animated {
+    animation-name: textfadein;
+    animation-duration: 1s;
+    transition: all 1s ease-in-out;
+    opacity: 0;
+    transform: translateY(100%);
+}
+
+@keyframes textfadein {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

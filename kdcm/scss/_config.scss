@@ -1,0 +1,69 @@
+// ! variables
+
+$blue: hsl(211, 100%, 50%);
+$indigo: hsl(263, 90%, 51%);
+$purple: hsl(261, 51%, 51%);
+$pink: hsl(332, 79%, 58%);
+$red: hsl(354, 70%, 54%);
+$orange: hsl(27, 98%, 54%);
+$orange2: hsl(27, 98%, 64%);
+$yellow: hsl(45, 100%, 51%);
+$green: hsl(134, 61%, 41%);
+$teal: hsl(162, 73%, 46%);
+$cyan: hsl(188, 78%, 41%);
+$white: hsl(0, 0%, 100%);
+$gray: #6d767e;
+$gray-dark: hsl(210, 10%, 23%);
+$primary: hsl(211, 100%, 50%);
+$secondary: hsl(208, 7%, 46%);
+$success: hsl(134, 61%, 41%);
+$info: hsl(188, 78%, 41%);
+$warning: hsl(45, 100%, 51%);
+$danger: hsl(354, 70%, 54%);
+$light: hsl(210, 17%, 98%);
+$dark: hsl(210, 10%, 23%);
+$darkFont: hsl(0, 0%, 16%);
+$bgLightGray: hsl(108, 50%, 96%);
+// $bgLightGray: hsl(0, 0%, 95%);
+
+// ! break points
+
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// ! mixins for breakpoints
+
+@mixin mobile {
+    @media (max-width: $breakpoint-sm) {
+        @content
+    }
+}
+
+@mixin tablet {
+    @media (max-width: $breakpoint-md) {
+        @content
+    }
+}
+
+@mixin laptop {
+    @media (max-width: $breakpoint-lg) {
+        @content
+    }
+}
+
+@mixin desktop {
+    @media (max-width: $breakpoint-xl) {
+        @content
+    }
+}
+
+// ! reseting
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
