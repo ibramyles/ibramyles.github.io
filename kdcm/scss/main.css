@@ -5,10 +5,9 @@
 }
 
 nav {
-  width: 100vw;
+  width: 100% !important;
   height: 12vh;
   position: fixed;
-  top: 0;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 50;
 }
@@ -170,7 +169,7 @@ nav section .nav-links ul .donate:hover {
 .hero {
   position: relative;
   height: 100vh;
-  width: 100vw;
+  max-width: 100vw !important;
 }
 @media (max-width: 576px) {
   .hero {
@@ -182,7 +181,7 @@ nav section .nav-links ul .donate:hover {
 /* Slideshow container */
 .slideshow-container {
   background-color: rgba(0, 0, 0, 0.5);
-  width: 100vw;
+  max-width: 100vw !important;
   height: 100vh;
   position: relative;
 }
@@ -195,7 +194,7 @@ nav section .nav-links ul .donate:hover {
 .mySlides {
   display: none;
   height: 100vh;
-  width: 100vw;
+  max-width: 100vw !important;
   position: relative;
 }
 @media (max-width: 576px) {
@@ -217,7 +216,7 @@ nav section .nav-links ul .donate:hover {
 
 .mySlides img {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
 }
 @media (max-width: 576px) {
   .mySlides img {
@@ -288,7 +287,7 @@ nav section .nav-links ul .donate:hover {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 7;
@@ -303,7 +302,7 @@ nav section .nav-links ul .donate:hover {
 .what-you-do {
   margin-inline: auto;
   margin-top: -13vh;
-  width: 80vw;
+  max-width: 80vw;
   min-height: 26vh;
   display: flex;
   display: grid;
@@ -312,7 +311,7 @@ nav section .nav-links ul .donate:hover {
 @media (max-width: 576px) {
   .what-you-do {
     grid-template-columns: repeat(1, 1fr);
-    width: 100vw;
+    max-width: 100vw !important;
     margin-top: 0;
   }
 }
@@ -370,9 +369,9 @@ nav section .nav-links ul .donate:hover {
 
 **/
 .team {
-  width: 100vw;
+  max-width: 100vw !important;
   min-height: 85vh;
-  border: 1px solid hsl(0deg, 0%, 100%);
+  border-top: 1px solid hsl(0deg, 0%, 100%);
 }
 @media (max-width: 576px) {
   .team {
@@ -821,7 +820,7 @@ nav section .nav-links ul .donate:hover {
 
 **/
 .causes {
-  width: 100vw;
+  max-width: 100vw !important;
   min-height: 110vh;
   background: hsl(108deg, 50%, 96%);
   border: 1px solid hsl(108deg, 50%, 96%);
@@ -950,10 +949,11 @@ nav section .nav-links ul .donate:hover {
 
 **/
 .campaigns-section {
-  width: 100vw;
+  max-width: 100vw !important;
+  overflow-x: hidden;
   min-height: 105vh;
   background: hsl(108deg, 50%, 96%);
-  border: 1px solid hsl(108deg, 50%, 96%);
+  border-top: 1px solid hsl(108deg, 50%, 96%);
 }
 @media (max-width: 576px) {
   .campaigns-section {
@@ -963,7 +963,7 @@ nav section .nav-links ul .donate:hover {
 .campaigns-section .campaigns-inner {
   position: relative;
   margin: 8vh 0vh;
-  width: 100vw;
+  max-width: 100vw !important;
   margin-inline: auto;
 }
 @media (max-width: 576px) {
@@ -984,16 +984,14 @@ nav section .nav-links ul .donate:hover {
 }
 .campaigns-section .campaigns-inner .campaigns-slide-container {
   width: 100vw;
-  height: 60vh;
+  height: 61vh;
   position: absolute;
   top: 52vh;
   left: 50vw;
   transform: translate(-50%, -50%);
-  overflow: hidden;
 }
 @media (max-width: 576px) {
   .campaigns-section .campaigns-inner .campaigns-slide-container {
-    overflow-x: hidden;
     height: 30vh;
     margin-top: -20vh;
   }
@@ -1182,18 +1180,18 @@ nav section .nav-links ul .donate:hover {
 
 **/
 .events {
-  width: 100vw;
+  max-width: 100vw;
   min-height: 105vh;
-  border: 1px solid hsl(0deg, 0%, 100%);
+  border-top: 1px solid hsl(0deg, 0%, 100%);
 }
 .events .events-inner {
   margin: 8vh 0px;
-  width: 80vw;
+  max-width: 80vw;
   margin-inline: auto;
 }
 @media (max-width: 768px) {
   .events .events-inner {
-    width: 80vw;
+    max-width: 80vw;
   }
 }
 .events .events-inner h2 {
@@ -1212,14 +1210,14 @@ nav section .nav-links ul .donate:hover {
   grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
   margin-top: 10vh;
-  width: 80vw;
+  max-width: 80vw;
   min-height: 60vh;
   margin-inline: auto;
 }
 @media (max-width: 768px) {
   .events .events-inner .events-cards-section {
     grid-template-columns: repeat(2, 1fr);
-    width: 80vw;
+    max-width: 80vw;
     min-height: 100vh;
   }
 }
@@ -1236,7 +1234,7 @@ nav section .nav-links ul .donate:hover {
   border: 1px dotted #6d767e;
 }
 .events .events-inner .events-cards-section .event-card .binding {
-  width: 100%;
+  max-width: 100%;
   z-index: 50;
   position: absolute;
   top: -15px;
@@ -1245,7 +1243,7 @@ nav section .nav-links ul .donate:hover {
   margin: 0 auto;
 }
 .events .events-inner .events-cards-section .event-card .event-img {
-  width: 100%;
+  max-width: 100%;
   height: 50%;
   display: flex;
   justify-content: center;
@@ -1253,7 +1251,7 @@ nav section .nav-links ul .donate:hover {
   visibility: visible;
 }
 .events .events-inner .events-cards-section .event-card .event-img img {
-  width: 90%;
+  max-width: 90%;
   height: 75%;
   border-radius: 5px;
 }
@@ -1261,7 +1259,7 @@ nav section .nav-links ul .donate:hover {
   font-size: 1.1rem;
   color: hsl(27deg, 98%, 54%);
   font-family: "Poppins", sans-serif;
-  width: 100%;
+  max-width: 100%;
   text-align: center;
   position: absolute;
   top: 10px;
@@ -1271,7 +1269,7 @@ nav section .nav-links ul .donate:hover {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   margin-inline: auto;
-  width: 100%;
+  max-width: 100%;
   height: 50 .events .events-inner .events-cards-section .event-card .event-desc;
 }
 .events .events-inner .events-cards-section .event-card .event-desc h5 {
@@ -1299,7 +1297,7 @@ nav section .nav-links ul .donate:hover {
 
 **/
 .recent-stories {
-  width: 100vw;
+  max-width: 100vw;
   min-height: 100vh;
   border: 1px solid hsl(0deg, 0%, 100%);
   background: hsl(108deg, 50%, 96%);
@@ -1311,7 +1309,7 @@ nav section .nav-links ul .donate:hover {
 }
 @media (max-width: 576px) {
   .recent-stories .recent-stories-inner {
-    width: 80vw;
+    max-width: 80vw;
   }
 }
 .recent-stories .recent-stories-inner h2 {
@@ -1562,9 +1560,9 @@ footer a:hover {
 }
 
 body {
-  max-width: 100%;
+  width: 100% !important;
   font-family: "Jost", sans-serif;
-  overflow-x: hidden !important;
+  overflow-x: hidden;
 }
 
 h1,
@@ -1601,11 +1599,16 @@ input:focus {
   outline: none;
 }
 
+main {
+  width: 100vw !important;
+  overflow-x: hidden;
+}
+
 .what-we-do {
-  width: 100vw;
-  height: 100vh;
+  max-width: 100vw !important;
+  min-height: 95vh;
   background: hsl(108deg, 50%, 96%);
-  border: 1px solid hsl(0deg, 0%, 100%);
+  border-top: 1px solid hsl(0deg, 0%, 100%);
   margin-top: -10vh;
 }
 @media (max-width: 576px) {
@@ -1633,6 +1636,7 @@ input:focus {
   .what-we-do .what-we-do-inner .what-we-do-left {
     display: flex;
     flex-direction: column;
+    margin-bottom: 15vh;
   }
 }
 .what-we-do .what-we-do-inner .what-we-do-left h6 {
@@ -1714,14 +1718,13 @@ input:focus {
 }
 
 .who-we-are {
-  width: 100vw;
-  min-height: 100vh;
-  background: hsl(108deg, 50%, 96%);
-  border: 1px solid hsl(0deg, 0%, 100%);
+  max-width: 100% !important;
+  min-height: 75vh;
+  border-top: 1px solid hsl(0deg, 0%, 100%);
 }
 @media (max-width: 576px) {
   .who-we-are {
-    border: 1px solid hsl(0deg, 0%, 100%);
+    border-top: 1px solid hsl(0deg, 0%, 100%);
   }
 }
 .who-we-are .who-we-are-inner {
@@ -1731,12 +1734,11 @@ input:focus {
   width: 80vw;
   margin-inline: auto;
   min-height: 60vh;
+  margin-top: 8vh;
   align-items: center;
 }
 @media (max-width: 576px) {
   .who-we-are .who-we-are-inner {
-    width: 80vw;
-    margin-top: 10vh;
     flex-direction: column-reverse;
   }
 }
@@ -1748,6 +1750,7 @@ input:focus {
     width: 80vw;
     display: flex;
     flex-direction: column;
+    margin-bottom: 10vh;
   }
 }
 .who-we-are .who-we-are-inner .who-we-are-left h6 {
@@ -1758,6 +1761,7 @@ input:focus {
 }
 @media (max-width: 576px) {
   .who-we-are .who-we-are-inner .who-we-are-left h6 {
+    margin-top: 15px;
     text-align: left;
     padding: 0;
   }
@@ -1818,6 +1822,7 @@ input:focus {
 @media (max-width: 576px) {
   .who-we-are .who-we-are-inner .who-we-are-right {
     width: 80vw;
+    height: 30vh;
     justify-content: center;
   }
 }
@@ -1866,45 +1871,9 @@ input:focus {
     transform: translateY(0);
   }
 }
-.who-we-are {
-  width: 100vw;
-  height: 80vh;
-  background: hsl(0deg, 0%, 100%);
-  border: 1px solid hsl(0deg, 0%, 100%);
-}
-.who-we-are .who-we-are-inner {
-  width: 80vw;
-  height: 80vh;
-  margin-inline: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.who-we-are .who-we-are-inner .who-we-are-inner1 {
-  width: 40vw;
-}
-.who-we-are .who-we-are-inner .who-we-are-inner1 h2 {
-  font-size: 2rem;
-  font-weight: bold;
-  color: hsl(27deg, 98%, 54%);
-  text-align: left;
-}
-.who-we-are .who-we-are-inner .who-we-are-inner1 h4 {
-  margin-top: 10px;
-  text-align: left;
-  color: hsl(0deg, 0%, 16%);
-  margin-bottom: 8px;
-}
-.who-we-are .who-we-are-inner .who-we-are-inner2 {
-  display: flex;
-  border: 2px solid red;
-  height: 350px;
-  width: 350px;
-}
-
 .how-you-help {
   height: 42vh;
-  width: 100vw;
+  max-width: 100vw !important;
   background: hsl(27deg, 98%, 54%);
   background-image: url(../assets/bg-simplify-section-desktop.svg);
 }
@@ -2013,14 +1982,13 @@ input:focus {
 
 **/
 .connect-with-us {
-  width: 100vw;
+  max-width: 100vw !important;
   min-height: 50vh;
   background: hsl(108deg, 50%, 96%);
   display: flex;
   align-items: center;
 }
 .connect-with-us .connect-inner {
-  position: relative;
   display: flex;
   justify-content: space-between;
   min-height: 50vh;
@@ -2031,7 +1999,6 @@ input:focus {
 @media (max-width: 576px) {
   .connect-with-us .connect-inner {
     margin-top: 10vh;
-    width: 80vw;
     flex-direction: column;
     margin-bottom: 10vh;
   }
@@ -2128,22 +2095,6 @@ input:focus {
   color: hsl(0deg, 0%, 16%);
   font-family: "Jost", sans-serif;
   cursor: pointer;
-}
-.connect-with-us .connect-inner .tape1 {
-  position: absolute;
-  top: -60px;
-  left: -60px;
-  visibility: hidden;
-}
-.connect-with-us .connect-inner .tape2 {
-  visibility: hidden;
-  position: absolute;
-  bottom: -70px;
-  right: -70px;
-}
-.connect-with-us .connect-inner .tape img {
-  width: 200px;
-  height: 200px;
 }
 
 .animate {

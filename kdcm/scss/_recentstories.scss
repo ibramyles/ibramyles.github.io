@@ -9,7 +9,7 @@
 **/
 
 .recent-stories {
-    width: 100vw;
+    max-width: 100vw;
     min-height: 100vh;
     border: 1px solid $white;
     background: $bgLightGray;
@@ -20,7 +20,7 @@
         margin-inline: auto;
 
         @include mobile {
-            width: 80vw;
+            max-width: 80vw;
         }
 
         h2 {

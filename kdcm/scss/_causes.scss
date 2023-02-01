@@ -9,7 +9,7 @@
 
 **/
 .causes {
-    width: 100vw;
+    max-width: 100vw !important;
     min-height: 110vh;
     background: $bgLightGray;
     border: 1px solid $bgLightGray;

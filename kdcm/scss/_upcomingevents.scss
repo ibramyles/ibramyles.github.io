@@ -11,17 +11,17 @@
 **/
 
 .events {
-    width: 100vw;
+    max-width: 100vw;
     min-height: 105vh;
-    border: 1px solid $white;
+    border-top: 1px solid $white;
 
     .events-inner {
         margin: 8vh 0px;
-        width: 80vw;
+        max-width: 80vw;
         margin-inline: auto;
 
         @include tablet {
-            width: 80vw;
+            max-width: 80vw;
         }
 
         h2 {
@@ -42,13 +42,13 @@
             grid-template-columns: repeat(3, 1fr);
             gap: 3rem;
             margin-top: 10vh;
-            width: 80vw;
+            max-width: 80vw;
             min-height: 60vh;
             margin-inline: auto;
 
             @include tablet {
                 grid-template-columns: repeat(2, 1fr);
-                width: 80vw;
+                max-width: 80vw;
                 min-height: 100vh;
             }
 
@@ -64,7 +64,7 @@
                 border: 1px dotted $gray;
 
                 .binding {
-                    width: 100%;
+                    max-width: 100%;
                     z-index: 50;
                     position: absolute;
                     top: -15px;
@@ -74,7 +74,7 @@
                 }
 
                 .event-img {
-                    width: 100%;
+                    max-width: 100%;
                     height: 50%;
                     display: flex;
                     justify-content: center;
@@ -82,7 +82,7 @@
                     visibility: visible;
 
                     img {
-                        width: 90%;
+                        max-width: 90%;
                         height: 75%;
                         border-radius: 5px;
                     }
@@ -91,7 +91,7 @@
                         font-size: 1.1rem;
                         color: $orange;
                         font-family: 'Poppins', sans-serif;
-                        width: 100%;
+                        max-width: 100%;
                         text-align: center;
                         position: absolute;
                         top: 10px;
@@ -104,7 +104,7 @@
                     border-bottom-left-radius: 5px;
                     border-bottom-right-radius: 5px;
                     margin-inline: auto;
-                    width: 100%;
+                    max-width: 100%;
                     height: 50&;
 
                     h5 {

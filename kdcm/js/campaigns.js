@@ -45,8 +45,4 @@ const checkBoundary = () => {
   }
 };
 
-// const cardWidth = innerSlider.firstElementChild.offsetWidth;
-// const totalCards = innerSlider.childElementCount;
-// const middleCardIndex = Math.floor(totalCards / 2);
-// const leftOffset = middleCardIndex * cardWidth;
 innerSlider.style.left = `-80vw`;

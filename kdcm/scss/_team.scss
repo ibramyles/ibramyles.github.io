@@ -11,9 +11,9 @@
 
 **/
 .team {
-    width: 100vw;
+    max-width: 100vw !important;
     min-height: 85vh;
-    border: 1px solid $white;
+    border-top: 1px solid $white;
 
     @include mobile {
         min-height: 95vh;
