@@ -2,7 +2,7 @@
 
 footer {
     position: relative;
-    height: 40vh;
+    min-height: 40vh;
     background: $gray;
     display: flex;
     justify-content: end;
@@ -36,18 +36,34 @@ footer {
     justify-content: space-between;
     align-items: center;
     width: 80vw;
-    height: 22vh;
+    min-height: 22vh;
     margin-inline: auto;
     color: #fff;
     padding-bottom: 20px;
     margin-top: 8vh;
     // border-top: 1px solid $gray;
 
+    @include mobile {
+        flex-direction: column;
+        width: 80vw;
+        gap: 1rem;
+    }
+
+    h2 {
+        @include mobile {
+            text-align: center;
+        }
+    }
+
     .contact div {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         justify-content: center;
         color: $gray;
+
+        @include mobile {
+            grid-template-columns: repeat(1, 1fr);
+        }
 
         h4 {
             margin-bottom: 10px;
@@ -58,6 +74,10 @@ footer {
     .socials {
         display: flex;
         gap: 12px;
+
+        @include mobile {
+            gap: 20px;
+        }
     }
 
     // ! links

@@ -51,6 +51,7 @@
             position: relative;
 
             @include mobile {
+                margin-top: 20vh;
                 grid-template-columns: repeat(1, 1fr);
                 gap: 15vh;
 

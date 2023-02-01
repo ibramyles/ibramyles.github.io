@@ -87,7 +87,7 @@ input:focus {
             @include mobile {
                 display: flex;
                 flex-direction: column;
-                place-items: center;
+                // justify-content: left;
             }
 
             // border: 2px solid blue;
@@ -98,7 +98,7 @@ input:focus {
                 font-family: 'Poppins', sans-serif;
 
                 @include mobile {
-                    text-align: center;
+                    text-align: left;
                 }
             }
 
@@ -109,7 +109,7 @@ input:focus {
                 text-align: left;
 
                 @include mobile {
-                    text-align: center;
+                    text-align: left;
                 }
             }
 
@@ -122,7 +122,7 @@ input:focus {
 
                 @include mobile {
                     padding: 0px;
-                    text-align: center;
+                    text-align: left;
                 }
             }
 
@@ -134,6 +134,11 @@ input:focus {
                 background: $orange;
                 color: $white;
                 cursor: pointer;
+
+                @include mobile {
+                    width: 120px;
+                    padding: 10px 20px;
+                }
             }
 
             button:hover {
@@ -208,6 +213,8 @@ input:focus {
 
             @include mobile {
                 width: 90vw;
+                display: flex;
+                flex-direction: column;
             }
 
             h6 {
@@ -217,7 +224,7 @@ input:focus {
                 padding-left: 60px;
 
                 @include mobile {
-                    text-align: center;
+                    text-align: left;
                     padding: 0;
                 }
             }
@@ -230,7 +237,7 @@ input:focus {
                 padding-left: 60px;
 
                 @include mobile {
-                    text-align: center;
+                    text-align: left;
                     padding: 0;
                 }
             }
@@ -243,7 +250,7 @@ input:focus {
                 line-height: 1.8rem;
 
                 @include mobile {
-                    text-align: center;
+                    text-align: left;
                     padding: 0px;
                 }
             }
@@ -258,8 +265,10 @@ input:focus {
                 cursor: pointer;
                 margin-left: 60px;
 
-                @include mobile {
-                    margin-inline: auto;
+                @include tablet {
+                    width: 120px;
+                    padding: 10px 20px;
+                    margin-left: 0px;
                 }
             }
 
@@ -371,6 +380,10 @@ input:focus {
     background: $orange;
     background-image: url(../assets/bg-simplify-section-desktop.svg);
 
+    @include mobile {
+        // height: 40vh;
+    }
+
     h2 {
         padding-top: 8vh;
         text-align: center;
@@ -383,7 +396,11 @@ input:focus {
         padding-top: 10px;
         text-align: center;
         padding-inline: 450px;
-        color: $white;
+        color: $darkFont;
+
+        @include mobile {
+            padding-inline: 30px;
+        }
     }
 }
 
@@ -391,10 +408,17 @@ input:focus {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     margin-top: -15vh;
-    height: 30vh;
+    min-height: 30vh;
     width: 60vw;
     margin-inline: auto;
     margin-bottom: 15vh;
+
+    @include tablet {
+        margin-top: -12vh;
+        grid-template-columns: repeat(2, 1fr);
+        width: 90vw;
+        // row-gap: 20px;
+    }
 
     h2 {
         font-weight: 600;
@@ -410,6 +434,11 @@ input:focus {
         border-left: 1px solid $gray;
         background: $bgLightGray;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%239C92AC' fill-opacity='0.15' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"), linear-gradient(to right bottom, hsl(210, 10%, 30%), hsl(210, 10%, 30%), hsl(210, 10%, 30%), hsl(210, 10%, 30%), hsl(210, 10%, 30%));
+
+        @include mobile {
+            height: 150px;
+            border-bottom: 1px solid $gray;
+        }
 
         button {
             margin-top: 20px;
@@ -473,31 +502,57 @@ input:focus {
 **/
 .connect-with-us {
     width: 100vw;
-    height: 50vh;
+    min-height: 50vh;
     // background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../assets/connect.jpg);
     background: $bgLightGray;
     display: flex;
     align-items: center;
 
+    @include mobile {}
+
     .connect-inner {
         position: relative;
         display: flex;
         justify-content: space-between;
-        height: 50vh;
+        min-height: 50vh;
         width: 80vw;
         margin-inline: auto;
         align-items: center;
         // background: rgba(0, 0, 0, 0.4);
 
+        @include mobile {
+            margin-top: 10vh;
+            width: 90vw;
+            flex-direction: column;
+            margin-bottom: 10vh;
+        }
+
+        .connect-div {
+            @include mobile {
+                display: flex;
+                flex-direction: column;
+                place-content: center;
+            }
+        }
+
         h2 {
             font-size: 2rem;
             font-weight: bold;
             color: $orange;
+
+            @include mobile {
+                text-align: center;
+            }
         }
 
         p {
             margin-top: 2vh;
             padding-inline-end: 300px;
+
+            @include mobile {
+                padding-inline: 20px;
+                text-align: center;
+            }
         }
 
         .donate-btn {
@@ -507,6 +562,11 @@ input:focus {
             background-color: $orange;
             font-family: 'Jost', sans-serif;
             cursor: pointer;
+
+            @include mobile {
+                width: 120px;
+                margin-inline: auto;
+            }
         }
 
         .donate-btn:hover {
@@ -520,6 +580,12 @@ input:focus {
             display: flex;
             flex-direction: column;
             // border-radius: 4px;
+
+            @include mobile {
+                display: flex;
+                flex-direction: column;
+                place-items: center;
+            }
 
             input {
                 background: $white;
