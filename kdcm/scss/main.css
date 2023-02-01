@@ -993,6 +993,7 @@ nav section .nav-links ul .donate:hover {
 }
 @media (max-width: 576px) {
   .campaigns-section .campaigns-inner .campaigns-slide-container {
+    overflow-x: hidden;
     height: 30vh;
     margin-top: -20vh;
   }
@@ -1008,7 +1009,8 @@ nav section .nav-links ul .donate:hover {
 }
 @media (max-width: 576px) {
   .campaigns-section .campaigns-inner .campaigns-slide-container .inner-slider {
-    width: 300vw;
+    width: 280vw;
+    overflow-x: hidden;
   }
 }
 .campaigns-section .campaigns-inner .campaigns-slide-container .inner-slider .slide-card {
@@ -1560,8 +1562,9 @@ footer a:hover {
 }
 
 body {
+  max-width: 100%;
   font-family: "Jost", sans-serif;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 
 h1,

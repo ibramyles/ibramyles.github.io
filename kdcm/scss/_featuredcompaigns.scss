@@ -59,6 +59,7 @@
             overflow: hidden;
 
             @include mobile {
+                overflow-x: hidden;
                 height: 30vh;
                 margin-top: -20vh;
             }
@@ -73,7 +74,8 @@
                 left: 0;
 
                 @include mobile {
-                    width: 300vw;
+                    width: 280vw;
+                    overflow-x: hidden;
                 }
 
                 .slide-card {

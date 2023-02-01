@@ -12,10 +12,11 @@
 @import './footer';
 
 body {
+    max-width: 100%;
     font-family: 'Jost', sans-serif;
     // font-family: 'Poppins', sans-serif;
     // font-size: 0.8rem;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
 
 h1,
