@@ -7,6 +7,7 @@ nav {
     z-index: 50;
 
     @include mobile {
+        // background-color: rgba(0, 0, 0, 0.5);
         background: $white;
     }
 
@@ -23,6 +24,26 @@ nav {
             height: 120px;
             width: 120px;
             cursor: pointer;
+
+            @include mobile {
+                display: none;
+            }
+        }
+
+        .logo-mobile {
+            display: none;
+
+            @include mobile {
+                display: block;
+                position: relative;
+                left: -35vw;
+            }
+
+            img {
+                height: 70px;
+                width: 70px;
+                cursor: pointer;
+            }
         }
 
         .nav-links {
@@ -121,6 +142,7 @@ nav {
 }
 
 .mobile-nav-links {
+    border-top: 1px solid $gray;
     display: none;
     background: $white;
     position: absolute;
@@ -156,6 +178,4 @@ nav {
             color: $orange;
         }
     }
-
-
 }

@@ -13,6 +13,10 @@
             margin-top: 20vh;
             color: $orange;
             text-align: center;
+
+            @include mobile {
+                font-size: 4rem;
+            }
         }
 
         h4 {

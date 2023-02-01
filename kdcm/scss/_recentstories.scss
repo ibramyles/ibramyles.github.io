@@ -20,7 +20,7 @@
         margin-inline: auto;
 
         @include mobile {
-            width: 90vw;
+            width: 80vw;
         }
 
         h2 {
@@ -44,7 +44,7 @@
             margin-inline: auto;
 
             @include tablet {
-                width: 90vw;
+                width: 80vw;
             }
 
             .story-card {

@@ -26,10 +26,6 @@
         margin-inline: auto;
         position: relative;
 
-        @include mobile {
-            width: 80vw;
-
-        }
 
         h2 {
             font-size: 2rem;
