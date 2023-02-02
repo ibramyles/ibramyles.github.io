@@ -1045,7 +1045,7 @@ nav section .nav-links ul .donate:hover {
 }
 @media (max-width: 576px) {
   .campaigns-section .campaigns-inner .campaigns-slide-container .inner-slider {
-    width: 280vw;
+    width: 300vw;
     overflow-x: hidden;
   }
 }
