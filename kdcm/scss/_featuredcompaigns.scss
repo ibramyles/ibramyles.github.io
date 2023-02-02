@@ -105,8 +105,8 @@
                         left: 20px;
 
                         @include mobile {
-                            width: 45px;
-                            height: 45px;
+                            width: 50px;
+                            height: 50px;
                             top: 0px;
                             left: 0px;
                         }
@@ -134,6 +134,10 @@
                         width: 95%;
                         margin-inline: auto;
                         margin-bottom: 20px;
+
+                        @include mobile {
+                            width: 90%;
+                        }
 
                         .area {
                             margin-bottom: 15px;
@@ -180,7 +184,7 @@
                                 padding-inline: 10px;
 
                                 @include mobile {
-                                    width: 260px;
+                                    width: 250px;
                                     margin-inline: auto;
                                     height: 30px;
                                 }

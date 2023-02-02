@@ -1079,8 +1079,8 @@ nav section .nav-links ul .donate:hover {
 }
 @media (max-width: 576px) {
   .campaigns-section .campaigns-inner .campaigns-slide-container .inner-slider .slide-card .donated-circle {
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
     top: 0px;
     left: 0px;
   }
@@ -1107,6 +1107,11 @@ nav section .nav-links ul .donate:hover {
   width: 95%;
   margin-inline: auto;
   margin-bottom: 20px;
+}
+@media (max-width: 576px) {
+  .campaigns-section .campaigns-inner .campaigns-slide-container .inner-slider .slide-card .campaign-info {
+    width: 90%;
+  }
 }
 .campaigns-section .campaigns-inner .campaigns-slide-container .inner-slider .slide-card .campaign-info .area {
   margin-bottom: 15px;
@@ -1151,7 +1156,7 @@ nav section .nav-links ul .donate:hover {
 }
 @media (max-width: 576px) {
   .campaigns-section .campaigns-inner .campaigns-slide-container .inner-slider .slide-card .campaign-info .donations div {
-    width: 260px;
+    width: 250px;
     margin-inline: auto;
     height: 30px;
   }
