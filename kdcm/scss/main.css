@@ -783,6 +783,7 @@ nav section .nav-links ul .donate:hover {
 .gallery-section .gallery-section-1 {
   height: 35vh;
   width: 100vw;
+  border-bottom: 2px groove;
 }
 .gallery-section .gallery-section-1 h2 {
   font-size: 5rem;
@@ -798,11 +799,48 @@ nav section .nav-links ul .donate:hover {
 .gallery-section .gallery-section-1 h4 {
   text-align: center;
 }
+.gallery-section .full-img {
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+.gallery-section .full-img img {
+  width: 90%;
+  max-width: 500px;
+}
+.gallery-section .full-img span {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  cursor: pointer;
+  font-size: 2rem;
+  color: hsl(0deg, 0%, 100%);
+}
 .gallery-section .gallery {
-  border-top: 2px groove;
+  margin-top: 10vh;
   margin-inline: auto;
   width: 80vw;
   min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 10vh;
+  grid-gap: 30px;
+}
+.gallery-section .gallery img {
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+}
+.gallery-section .gallery img:hover {
+  transform: scale(0.8);
+  border-radius: 10px;
 }
 
 * {
@@ -1230,8 +1268,9 @@ nav section .nav-links ul .donate:hover {
   border-radius: 10px;
   opacity: 0;
   position: relative;
-  height: 60vh;
+  height: 75vh;
   border: 1px dotted #6d767e;
+  box-shadow: 0px -5px 10px #6d767e;
 }
 .events .events-inner .events-cards-section .event-card .binding {
   max-width: 100%;
@@ -1251,7 +1290,7 @@ nav section .nav-links ul .donate:hover {
   visibility: visible;
 }
 .events .events-inner .events-cards-section .event-card .event-img img {
-  max-width: 90%;
+  width: 90%;
   height: 75%;
   border-radius: 5px;
 }
@@ -1259,7 +1298,7 @@ nav section .nav-links ul .donate:hover {
   font-size: 1.1rem;
   color: hsl(27deg, 98%, 54%);
   font-family: "Poppins", sans-serif;
-  max-width: 100%;
+  width: 100%;
   text-align: center;
   position: absolute;
   top: 10px;
@@ -1277,6 +1316,9 @@ nav section .nav-links ul .donate:hover {
   color: #6d767e;
   font-family: "Poppins", sans-serif;
   margin: 20px 0px 10px 0px;
+}
+.events .events-inner .events-cards-section .event-card .event-desc span {
+  color: hsl(27deg, 98%, 54%);
 }
 .events .events-inner .events-cards-section .event-card:hover {
   background: hsl(108deg, 50%, 96%);
