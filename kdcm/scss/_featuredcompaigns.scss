@@ -73,7 +73,7 @@
                 left: 0;
 
                 @include mobile {
-                    width: 310vw;
+                    width: 315vw;
                     overflow-x: hidden;
                 }
 
@@ -87,7 +87,7 @@
                     z-index: 50;
 
                     @include mobile {
-                        width: 80vw;
+                        width: 85vw;
                         height: 30vh;
                     }
 
@@ -184,7 +184,7 @@
                                 padding-inline: 10px;
 
                                 @include mobile {
-                                    width: 250px;
+                                    width: 100%;
                                     margin-inline: auto;
                                     height: 30px;
                                 }
